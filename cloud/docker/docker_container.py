@@ -911,7 +911,7 @@ class TaskParameters(DockerBaseClass):
         if self.published_ports is None:
             return None
 
-        if 'all' in self.published_ports:
+        if 'all' in self.published_ports or 'ALL' in self.published_ports:
             return 'all'
 
         binds = {}
